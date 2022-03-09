@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Integration Control" max_length="40" name="u_integration_control" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Initial Ticket" max_length="40" name="u_initial_ticket" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Integration Status" max_length="40" name="u_integration_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Jira Correlated id" max_length="40" name="u_jira_correlated_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+    </element>
+</database>

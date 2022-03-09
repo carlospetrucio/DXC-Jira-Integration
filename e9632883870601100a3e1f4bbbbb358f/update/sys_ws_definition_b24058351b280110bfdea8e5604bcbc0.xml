@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/558714/jira_return_api</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Jira Return API</name>
+        <namespace>558714</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>jira_return_api</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 03:55:09</sys_created_on>
+        <sys_id>b24058351b280110bfdea8e5604bcbc0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Jira Return API</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</sys_scope>
+        <sys_update_name>sys_ws_definition_b24058351b280110bfdea8e5604bcbc0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:20:59</sys_updated_on>
+    </sys_ws_definition>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</claim_owner_scope>
+        <claim_timestamp>17f6f7bcec00000001</claim_timestamp>
+        <metadata_update_name>sys_ws_definition_b24058351b280110bfdea8e5604bcbc0</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>DXC Jira Integration</previous_claim_name>
+        <previous_claim_scope>e9632883870601100a3e1f4bbbbb358f</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 16:20:59</sys_created_on>
+        <sys_id>1e076087870601100a3e1f4bbbbb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:20:59</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>Default GET </function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Jira Beta Integration [ Default GET  ]</qualified_name>
+        <rest_endpoint>https://betaintegration.atlassian.net/rest/api/2/issue/BI-1</rest_endpoint>
+        <rest_message display_value="Jira Beta Integration">1bc9ba651be40110bfdea8e5604bcb0c</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-20 21:37:34</sys_created_on>
+        <sys_id>e9e9b2e91ba40110bfdea8e5604bcbb3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Default GET </sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_e9e9b2e91ba40110bfdea8e5604bcbb3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:19:30</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</claim_owner_scope>
+        <claim_timestamp>17f6f7b3e560000001</claim_timestamp>
+        <metadata_update_name>sys_rest_message_fn_e9e9b2e91ba40110bfdea8e5604bcbb3</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>DXC Jira Integration</previous_claim_name>
+        <previous_claim_scope>e9632883870601100a3e1f4bbbbb358f</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 16:20:22</sys_created_on>
+        <sys_id>dde6ec47870601100a3e1f4bbbbb35b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:20:22</sys_updated_on>
+    </sys_claim>
+</record_update>
