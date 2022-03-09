@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>update_comment_jira</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+var jsonArray = JSON.stringify(request.body.data);
+var jsonParsedArray = JSON.parse(jsonArray);
+var correlationIdJira = jsonParsedArray.id;
+//update comment
+var TicketNumber = jsonParsedArray.fields.customfield_10060;
+var verificationINC = "INC";
+var verificationRitm = "RITM";
+	
+if(TicketNumber.includes(verificationINC)){
+var arr = jsonParsedArray.fields.comment.comments;
+var JiraWorkNotesBody = JSON.stringify(arr[arr.length -1].body, null, 2);
+var inc = new GlideRecord('incident');
+inc.addQuery('number', TicketNumber);
+inc.query();
+if(inc.next()){
+inc.work_notes = 'Jira Update: ' + JiraWorkNotesBody;
+inc.update();
+}		
+} //End if verification Incident
+	
+if(TicketNumber.includes(verificationRitm))
+var arr = jsonParsedArray.fields.comment.comments;
+var JiraWorkNotesBody = JSON.stringify(arr[arr.length -1].body, null, 2);	
+var ritm = new GlideRecord('sc_req_item');
+ritm.addQuery('number', TicketNumber);
+ritm.query();
+if(ritm.next()){
+var TaskNumber = ritm.sys_id;
+var req = new GlideRecord('sc_task');
+req.addQuery('request_item', TaskNumber);
+req.query();
+if(req.next()){
+req.work_notes = 'Jira Update: ' + JiraWorkNotesBody;
+req.update();
+}
+}
+
+		
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/558714/jira_return_api/update_comment_jira</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/update_comment_jira</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-11 15:19:04</sys_created_on>
+        <sys_id>fca5bea4874101100a3e1f4bbbbb3568</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>update_comment_jira</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</sys_scope>
+        <sys_update_name>sys_ws_operation_fca5bea4874101100a3e1f4bbbbb3568</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:21:49</sys_updated_on>
+        <web_service_definition display_value="Jira Return API">b24058351b280110bfdea8e5604bcbc0</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="DXC Jira Integration">e9632883870601100a3e1f4bbbbb358f</claim_owner_scope>
+        <claim_timestamp>17f6f7c917e0000001</claim_timestamp>
+        <metadata_update_name>sys_ws_operation_fca5bea4874101100a3e1f4bbbbb3568</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>DXC Jira Integration</previous_claim_name>
+        <previous_claim_scope>e9632883870601100a3e1f4bbbbb358f</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 16:21:49</sys_created_on>
+        <sys_id>a6372487870601100a3e1f4bbbbb359a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 16:21:49</sys_updated_on>
+    </sys_claim>
+</record_update>
